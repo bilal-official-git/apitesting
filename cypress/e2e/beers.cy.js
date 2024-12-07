@@ -8,6 +8,7 @@ describe('API Automation - Health Professions Endpoint', () => {
         expect(response.status).to.eq(200);
         expect(response.headers['server']).to.include('cloudflare');
   
+        expect(response.body).to.be.an('array');
         expect(response.body.length).to.be.greaterThan(0);
       });
     });
